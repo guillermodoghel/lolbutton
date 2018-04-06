@@ -1,0 +1,269 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+	<!-- plus a jQuery UI theme, here I use "flick" -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+
+
+	<style type="text/css">
+	.base{
+		color:blue;
+	}
+	.centered {
+
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -50px;
+		margin-left: -100px;
+	}
+
+	.area1 {
+		width: 100px;
+		height: 100px;
+		background: grey;
+		border: 4px solid #000000;
+	}
+	.base {
+		background: grey;
+		display: inline-block;
+		height: 56px;
+		margin-left: -100px;
+		margin-top: 66px;
+
+		width: 100px;
+	}
+	.base:before {
+		border-bottom: 35px solid grey;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		content: "";
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: -35px;
+		width: 0;
+	}
+	.opcionesOeste{
+		margin-left: -201px;
+		margin-top: -28px;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		rotation: 90deg;
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+	}
+	.opcionesEste{
+		margin-left: 0px;
+		margin-top: -30px;
+
+
+
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+
+
+	}
+
+
+	.opcionesNorte{
+		margin-left: -100px;
+		margin-top: -115px;
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		rotation: 180deg;
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+
+
+	}
+
+	.opcionesSur{
+		margin-left: -100px;
+		margin-top: 66px;
+	}
+
+	.finger{
+		height: 80;
+		width: 80;
+		margin-left: -91px;
+		margin-top: -40px;
+	}
+	ul{
+		list-style: none;
+		position: relative;
+		z-index: 99;
+	}
+	ul#main li{
+		float: left;
+
+		overflow: visible;
+	}
+	ul#main li a{
+		display: block;
+		padding: 0px 10px 10px 10px;
+	}
+	ul.sub{
+		position: relative; 
+		top: 100%; 
+		right: 30%;
+		display: none;
+		z-index: 999;
+		width:60px
+	}
+
+	ul.sub li{
+		float: none; 
+	}
+	</style>
+	<link rel="stylesheet" href="freshslider.min.css">
+</head>
+<body>
+	<div>
+
+
+		<ul id="main">
+			<li class="centered area1 nmenuBase"><a></a>
+				<ul class="sub">
+					<li class='centered base opcionesNorte'>
+						<i style="    margin-left: 20px;
+						margin-top: -6;" class="fa fa-heart fa-4x fa-rotate-180"></i>
+						<ul class="sub">
+							<li style="	
+							background: rebeccapurple;
+							display: inline-block;
+							position: fixed; 
+							top: inherit;
+							right: -100px;
+
+							-webkit-transform: rotate(180deg);
+							-moz-transform: rotate(180deg);
+							rotation: 180deg;
+							filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+
+							" ><div id="valueNorte" style="width: 250px; margin: 20px"><div class="fsslider"><div class="fsfull-value"></div><div class="fssel-value" style="left: 0px; width: 25px; "></div><div class="fscaret" style="left: 41px; margin-left: -20px; z-index: 1; ">0</div></div></div></li>
+						</ul>
+					</li>
+
+					<li class='centered base opcionesSur'>
+						<i style="    margin-left: 20px;
+						margin-top: -6;" class="fa fa-heart-o fa-4x "></i>
+						<ul class="sub">
+							<li style="	
+							background: rebeccapurple;
+							display: inline-block;
+							top: -50px;
+							position: absolute;
+							right: -170px;
+
+
+							" ><div id="valueSur" style="width: 250px; margin: 20px"><div class="fsslider"><div class="fsfull-value"></div><div class="fssel-value" style="left: 0px; width: 25px; "></div><div class="fscaret" style="left: 41px; margin-left: -20px; z-index: 1; ">10</div></div></div></li>
+						</ul>
+					</li>
+
+					<li class='centered base opcionesEste'>
+						<i style="    margin-left: 20px;
+						margin-top: -6;" class="fa fa-random fa-4x fa-rotate-90"></i>
+						<ul class="sub">
+							<li style="
+							background: rebeccapurple;
+							display: inline-block;
+							position: inherit;
+							top: 60px;
+							right: 103px;
+							-webkit-transform: rotate(90deg);
+							-moz-transform: rotate(90deg);
+							rotation: 90deg;
+							filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+							">
+							<div class="flat-slider-vertical-1" styl="  height: 150px;
+							margin-left: 30px;"></div>
+							<div id="valueEste" style="width: 250px; margin: 20px"><div class="fsslider"><div class="fsfull-value"></div><div class="fssel-value" style="left: 0px; width: 25px; "></div><div class="fscaret" style="left: 41px; margin-left: -20px; z-index: 1; ">10</div></div></div>
+						</li>
+					</ul>
+				</li>
+				<li class='centered base opcionesOeste'>
+					<i style="    margin-left: 20px;
+					margin-top: -6;" class="fa fa-heartbeat fa-4x fa-rotate-270"></i>
+					<ul class="sub">
+						<li style="
+						background: rebeccapurple;
+						display: inline-block;
+						position: inherit;
+						top: 60px;
+						right: 103px;
+
+						-webkit-transform: rotate(270deg);
+						-moz-transform: rotate(270deg);
+						filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+						">
+						<div class="flat-slider-vertical-1" styl="  height: 150px;
+						margin-left: 30px;"></div>
+						<div id="valueOeste" style="width: 250px; margin: 20px"><div class="fsslider"><div class="fsfull-value"></div><div class="fssel-value" style="left: 0px; width: 25px; "></div><div class="fscaret" style="left: 41px; margin-left: -20px; z-index: 1; ">10</div></div></div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="freshslider.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() { 
+
+
+
+	$('ul#main li').mouseenter(function(){
+		$(this).children('ul.sub').slideDown(100);
+		$( this ).css( "color", "red" );
+	});
+	$('ul#main li').mouseleave(function(){
+		$(this).children('ul.sub').slideUp(100);
+		$( this ).css( "color", "blue" );
+	});
+
+
+
+
+});
+
+var sn = $("#valueNorte").freshslider({
+	step:1,
+	value:10,
+});
+var ss = $("#valueSur").freshslider({
+	step: 1,
+	value:10
+});
+var se = $("#valueEste").freshslider({
+	step: 1,
+	value:10
+});
+
+var so = $("#valueOeste").freshslider({
+	step: 1,
+	value:10
+});
+
+</script>
+</html>	
