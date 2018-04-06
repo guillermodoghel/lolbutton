@@ -5,9 +5,9 @@
 
 
 
-Base status
+
  ![demo](./screenshots/state1.png)
-On finger status
+
  ![demo](./screenshots/state2.png)
-Individual action status 
+ 
  ![demo](./screenshots/state3.png)
